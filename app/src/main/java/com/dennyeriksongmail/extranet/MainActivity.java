@@ -3,6 +3,7 @@ package com.dennyeriksongmail.extranet;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -21,6 +22,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import static android.provider.Settings.Global.getString;
@@ -106,10 +108,12 @@ public class MainActivity extends AppCompatActivity implements ConnectivityRecei
         int color;
         if (isConnected) {
             Toast.makeText(MainActivity.this, "Conectado", Toast.LENGTH_SHORT).show();
+
         } else {
-            message = "Sorry! Not connected to internet";
             Toast.makeText(MainActivity.this, "Desculpe, não há conexão com a internet", Toast.LENGTH_SHORT).show();
+
         }
+
     }
 
     @Override
